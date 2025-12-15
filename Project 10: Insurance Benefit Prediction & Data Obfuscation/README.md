@@ -1,7 +1,7 @@
 # Project 10 - Insurance Benefit Prediction & Data Obfuscation
 ---
 
-## 🔍 Objective
+## 🎯 Objective
 
 Evaluate whether machine learning can be used at *Sure Tomorrow Insurance* to:
 
