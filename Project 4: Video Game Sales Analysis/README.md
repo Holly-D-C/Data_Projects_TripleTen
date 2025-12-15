@@ -1,126 +1,65 @@
 # 🎮 Video Game Sales Forecasting
 
-## Project Overview
-This project analyzes historical video game sales data to identify patterns that determine a game’s commercial success.  
-Acting as a data analyst for the online store **Ice**, the goal was to uncover platform, genre, regional, and rating trends to inform future advertising and production strategies.
+## Overview
+Analyzed **historical video game sales** to identify platform, genre, and regional trends for **Ice**, an online game retailer.  
 
-The analysis combines exploratory data analysis, statistical testing, and predictive reasoning to support business-driven decision-making.
-
----
-
-## Business Objectives
-- Identify which platforms and genres consistently generate high sales
-- Understand how regional preferences differ across markets
-- Evaluate the impact of critic and user scores on total sales
-- Predict platform life cycles and future market viability
+**Goal:** Inform advertising, production, and platform strategies by uncovering patterns that drive commercial success.
 
 ---
 
-## Data Description
-The dataset includes:
-- Game titles, release years, platforms, and genres
-- Regional sales (North America, Europe, Japan, Other)
-- Critic scores, user scores, and ESRB ratings
+## Key Results 🚀
 
-**Time range:** 1980–2016  
-**Target metric:** Total global sales
+✅ **Actionable Insights**
 
----
-
-## Methodology
-
-### 1. Data Cleaning & Preprocessing
-- Standardized column names and corrected data types
-- Addressed missing values in:
-  - `critic_score`
-  - `user_score`
-  - `rating`
-- Imputed missing ESRB ratings and release years where possible
-- Filtered out incomplete records when required for statistical testing
+- **Top Platforms:** PS2, PS3, Xbox 360 generate highest global sales  
+- **Consistent Lifecycle:** PC platform shows long-term stability  
+- **Top Genres:** Action, Sports, Shooter  
+- **Regional Preferences:** RPGs dominate in Japan; Action/Sports in NA & Europe  
+- **Score Correlation:** Critic scores correlate moderately with sales (r ≈ 0.39), user scores weakly (r ≈ 0.11)  
+- **Forecasted Platform Life:** Wii, PS3, X360 → 2017; 3DS → 2019; WiiU/PSV → 2023; PS4/Xbox One → 2025
 
 ---
 
-### 2. Exploratory Data Analysis
-- Analyzed release trends by year and decade
-- Compared platform sales distributions and life cycles
-- Evaluated genre performance across time and regions
-- Examined regional market shares and platform dominance
-- Visualized trends using histograms, bar charts, and line plots
+## Why This Analysis?
+
+| Domain | Metric / Approach | Business Impact |
+|--------|-----------------|----------------|
+| Platform | Total & average sales | Identify profitable platforms for investment |
+| Genre | Sales by genre & region | Tailor development and marketing strategy |
+| Region | Regional sales distributions | Optimize localization and releases |
+| Ratings | Critic vs. user scores | Allocate marketing resources effectively |
+| Lifecycle | Platform lifespan modeling | Plan future releases & inventory |
 
 ---
 
-### 3. Statistical Analysis & Hypothesis Testing
+## Methodology (Brief)
 
-#### Hypothesis 1: Platform User Scores
-- **H₀:** Average user ratings for Xbox One and PC are equal  
-- **H₁:** Average user ratings differ between platforms  
-- **Result:** p-value < 0.01 → **Reject H₀**
+1. **Data Cleaning & Preprocessing**
+   - Standardized columns and types  
+   - Imputed missing critic/user scores and ESRB ratings  
+   - Removed incomplete records for statistical analysis  
 
-There is a statistically significant difference in user ratings between Xbox One and PC.
+2. **Exploratory Data Analysis**
+   - Platform and genre sales trends  
+   - Regional sales comparisons  
+   - Visualizations: histograms, bar charts, line plots  
 
----
+3. **Statistical Testing**
+   - Hypothesis testing for platform and genre user score differences  
+   - Example: Xbox One vs PC → significant difference (p < 0.01)  
 
-#### Hypothesis 2: Genre User Scores
-- **H₀:** Average user ratings for Action and Sports genres are equal  
-- **H₁:** Average user ratings differ between genres  
-- **Result:** p-value ≈ 0.12 → **Fail to reject H₀**
-
-No statistically significant difference in average user scores between Action and Sports genres.
-
----
-
-### 4. Platform Lifecycle & Forecasting
-- Identified typical console lifecycles of **5–10 years**
-- Modeled growth and decline patterns by release year
-- Forecasted out-of-market years for major platforms:
-  - Wii, PS3, X360 → 2017
-  - 3DS → 2019
-  - WiiU, PSV → 2023
-  - PS4, Xbox One → 2025
-- Highlighted **PC** as an outlier with lower sales but the longest lifecycle
+4. **Platform Lifecycle Forecasting**
+   - Modeled console lifecycles (5–10 years)  
+   - Predicted out-of-market years for major platforms  
+   - Identified PC as a stable outlier
 
 ---
 
-## Key Insights
-
-### Platform Performance
-- **Highest total sales:** PS2, PS3, Xbox 360
-- **Most consistent lifecycle:** PC
-- North America dominates global sales (~50%)
-
----
-
-### Genre Performance
-- **Top-performing genres:** Action, Sports, Shooter
-- Shooter games rebounded strongly after 2008
-- Role-Playing games dominate the Japanese market
-- Platform and Shooter games achieve the highest average sales
-
----
-
-### Regional Trends
-- **North America:** Action, Sports, Shooter (E & E10+ ratings perform best)
-- **Europe:** Action, Sports, Shooter, Racing (M-rated games generate higher average revenue)
-- **Japan:** Strong preference for Role-Playing games; M-rated games underperform
-- **Other regions:** Trends closely align with Europe
-
----
-
-### Scores & Sales Relationship
-- **Critic scores:** Moderate positive correlation with sales  
-  - Pearson r ≈ 0.39
-- **User scores:** Weak positive correlation  
-  - Pearson r ≈ 0.11
-- Critics provide more consistent and predictive scoring than users
-
----
-
-## Business Recommendations
-- Focus advertising on **Action, Sports, and Shooter** games
-- Prioritize **PlayStation and Xbox** platforms for global releases
-- Tailor game genres to regional preferences (RPGs for Japan)
-- Consider producing more **M-rated games** for Europe and Other regions
-- Maintain PC releases for long-term, stable revenue despite lower sales
+## Business Impact
+- **Advertising Focus:** Prioritize Action, Sports, Shooter games on top-performing platforms  
+- **Regional Strategy:** Target RPGs for Japan; M-rated games for Europe  
+- **Platform Planning:** PS4/PS5 and Xbox focus for global campaigns; maintain PC for long-term stable revenue  
+- **Score-Driven Insights:** Leverage critic reviews for predictive marketing campaigns
 
 ---
 
@@ -137,6 +76,3 @@ No statistically significant difference in average user scores between Action an
 ## Project Link
 
 📂 Notebook: [Project 4: Video Game Sales Forecasting](https://holly-d-c.github.io/my-portfolio/Project_5_Video_Games/video_game_sales_project_5.html)
-
-
-
