@@ -1,101 +1,69 @@
-# 🚕 Project 12 — Time Series Forecasting for Hourly Taxi Demand
+# 🚕 Hourly Taxi Demand Forecasting (Time Series)
+
+## Overview
+Developed a time series forecasting system for *Sweet Lift Taxi* to predict **hourly airport taxi demand**, enabling proactive driver allocation and reduced passenger wait times.
+
+**Goal:** Achieve RMSE < **48** while maintaining reliable short-term forecasts.
 
 ---
 
-## 🎯 Objective
+## Key Results 🚀
 
-Predict **hourly taxi demand** at airports for *Sweet Lift Taxi* to improve driver allocation.
+✅ **Forecasting accuracy exceeded business requirements**
 
-**Success Criteria:** RMSE < 48
-
----
-
-### 📊 Dataset
-
-* March–August 2018 taxi order history
-* Resampled to **hourly intervals**
-* ~4,400 observations
-* No missing data
+- **Best Model:** **CatBoost with advanced time-series features**
+- **RMSE:** **39.38** (≈ **18% better** than target threshold)
+- **Baseline Improvement:** **33%** reduction vs. persistence model
+- Multiple models met operational accuracy requirements
 
 ---
 
-### 🧠 Models Evaluated
+## Why CatBoost?
 
-**Statistical Models**
+| Model | RMSE | Meets Goal |
+|-----|-----|-----------|
+| **CatBoost** | **39.38** | ✅ |
+| LightGBM | 39.43 | ✅ |
+| SARIMA | 39.66 | ✅ |
+| XGBoost | 40.13 | ✅ |
+| Random Forest | 43.32 | ✅ |
+| Linear Regression | 45.83 | ✅ |
+| Persistence Baseline | 58.86 | ❌ |
 
-* AR, ARMA, ARIMA, **SARIMA**
-
-**Machine Learning Models**
-
-* Linear Regression
-* Random Forest
-* **CatBoost**
-* **LightGBM**
-* **XGBoost**
-
----
-
-### 🏆 Best Model
-
-**CatBoost (Advanced Features)**
-
-* **RMSE:** **39.38** ✅
-* Exceeded requirement by **18%**
-* 33% improvement over persistence baseline
+**Key Insight:**  
+Gradient boosting models with engineered lag and rolling features consistently outperform purely statistical approaches, while SARIMA remains competitive when seasonality is well captured.
 
 ---
 
-### 📈 Model Comparison (Selected)
-
-| Model                | RMSE      | Meets Goal |
-| -------------------- | --------- | ---------- |
-| CatBoost             | **39.38** | ✅          |
-| LightGBM             | 39.43     | ✅          |
-| SARIMA               | 39.66     | ✅          |
-| XGBoost              | 40.13     | ✅          |
-| Random Forest        | 43.32     | ✅          |
-| Linear Regression    | 45.83     | ✅          |
-| Persistence Baseline | 58.86     | ❌          |
+## Methodology (Brief)
+- Resampled taxi order data to **hourly intervals** (~4,400 observations)
+- Engineered lag features and rolling statistics
+- Evaluated statistical and ML models under identical conditions
+- Benchmarked performance using RMSE against a persistence baseline
 
 ---
 
-### 🧠 Key Insights
-
-* **Feature engineering (lags + rolling means)** reduced RMSE by up to **28%**
-* Gradient boosting models were the most reliable
-* SARIMA remains competitive when seasonality is well captured
-
----
-
-### 📌 Business Impact
-
-With RMSE ≈ 39:
-
-* Enables proactive driver recruitment 1–2 hours ahead
-* Reduces passenger wait times
-* Improves driver utilization and earnings
+## Business Impact
+- Enables **1–2 hour ahead driver allocation**
+- Reduces passenger wait times during peak demand
+- Improves driver utilization and revenue stability
+- Supports data-driven operational planning
 
 ---
 
-### 🛠 Tech Stack
-
-* Python, pandas, NumPy
-* matplotlib, scikit‑learn
-* statsmodels, CatBoost, LightGBM, XGBoost
-
----
-
-## ✅ Final Takeaways
-
-* **Scaling matters** for distance‑based models
-* **Gradient boosting dominates** structured tabular data
-* **Feature engineering** is often more impactful than model choice
-* **Privacy‑preserving ML** can be achieved without sacrificing accuracy
+## Tech Stack
+- Python
+- pandas
+- NumPy
+- matplotlib
+- scikit-learn
+- statsmodels
+- CatBoost
+- LightGBM
+- XGBoost
 
 ---
 
 ## Project Link
 
 📂 **Notebook:** [Project 12: Hourly Taxi Demand Forecasting](https://holly-d-c.github.io/my-portfolio/Project_13_Time_Series/Project_13_Taxi_Order_Prediction.html)
-
-
