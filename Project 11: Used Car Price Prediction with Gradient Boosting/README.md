@@ -1,6 +1,6 @@
 # 🚗 Project 11 — Used Car Price Prediction (Gradient Boosting)
 
-## 🔍 Objective
+## 🎯 Objective
 
 Build a production‑ready ML system for *Rusty Bargain* to predict used car prices, optimizing for:
 
