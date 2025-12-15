@@ -1,71 +1,63 @@
-# 🚗 Project 11 — Used Car Price Prediction (Gradient Boosting)
+# 🚗 Used Car Price Prediction with Gradient Boosting
 
-## 🎯 Objective
+## Overview
+Built and evaluated a production-ready machine learning system for *Rusty Bargain* to predict used car prices, balancing **prediction accuracy**, **training efficiency**, and **inference speed** for a customer-facing mobile application.
 
-Build a production‑ready ML system for *Rusty Bargain* to predict used car prices, optimizing for:
-
-* Prediction accuracy
-* Training time
-* Inference speed
-
-**Target:** Car price (€)
+**Goal:** Deliver accurate, fast price estimates at scale.
 
 ---
 
-### 📊 Dataset
+## Key Results 🚀
 
-* **330,000+ vehicles**
-* 16 features (technical specs, brand, mileage, condition)
-* Extensive missing values handled via **hierarchical imputation**
+✅ **Gradient boosting models significantly outperformed baselines**
 
----
-
-### 🧠 Models Evaluated
-
-* Linear Regression (baseline)
-* Decision Tree
-* Random Forest
-* **XGBoost**
-* **CatBoost**
-* **LightGBM**
+- **Best Model:** **LightGBM**
+- **RMSE:** **1,627 €** (≈ 40% improvement vs. Linear Regression)
+- **Training Time:** ~58 seconds
+- **Prediction Time:** ~4 seconds
+- **CatBoost Alternative:** Nearly identical accuracy with **sub-second inference**
 
 ---
 
-### 🏆 Best Model
+## Why LightGBM?
 
-**LightGBM (Set 2)**
+| Model | RMSE (€) | Training Time | Prediction Speed |
+|-----|---------|---------------|------------------|
+| **LightGBM** | **1,627** | Fast | Fast |
+| CatBoost | 1,637 | Moderate | **Very Fast** |
+| XGBoost | ~1,650 | Moderate | Moderate |
+| Random Forest | 1,686 | **Very Slow** | Moderate |
+| Linear Regression | 2,865 | Very Fast | Very Fast |
 
-* **RMSE:** **1,627 €**
-* Training time: ~58 seconds
-* Prediction time: ~4 seconds
-
----
-
-### 📈 Performance Comparison
-
-| Model             | RMSE (€)  | Training Time | Prediction Speed |
-| ----------------- | --------- | ------------- | ---------------- |
-| LightGBM          | **1,627** | Fast          | Fast             |
-| CatBoost          | 1,637     | Moderate      | **Very Fast**    |
-| XGBoost           | ~1,650    | Moderate      | Moderate         |
-| Random Forest     | 1,686     | **Very Slow** | Moderate         |
-| Linear Regression | 2,865     | Very Fast     | Very Fast        |
+**Key Insight:**  
+LightGBM offers the best **accuracy–performance trade-off**, while CatBoost is ideal when **real-time inference speed** is the primary constraint.
 
 ---
 
-### 🧠 Key Insights
-
-* Gradient boosting reduced RMSE by **40%+** vs. Linear Regression
-* CatBoost is ideal when **inference speed** is critical
-* LightGBM provides the **best overall balance** for production
+## Methodology (Brief)
+- Cleaned and preprocessed **330,000+ vehicle records**
+- Applied hierarchical imputation for missing technical specifications
+- Evaluated tree-based and linear models under identical conditions
+- Compared models using RMSE, training time, and inference speed
 
 ---
 
-### 🛠 Tech Stack
+## Business Impact
+- Enables **real-time car price estimates** in a mobile app
+- Improves customer trust through accurate valuations
+- Supports scalable deployment with fast inference
+- Justifies computational cost with significant accuracy gains
 
-* Python, pandas, NumPy
-* scikit‑learn
-* LightGBM, XGBoost, CatBoost
+---
+
+## Tech Stack
+- Python
+- pandas
+- NumPy
+- scikit-learn
+- LightGBM
+- XGBoost
+- CatBoost
 
 ---
 
