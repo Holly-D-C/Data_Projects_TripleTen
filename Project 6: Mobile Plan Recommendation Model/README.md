@@ -183,4 +183,4 @@ This project successfully developed a machine learning solution that **predicts 
 
 ## Project Link
 
-📂 **Notebook:** [Mobile Plan Recommendation Model Project](https://holly-d-c.github.io/my-portfolio/Project_7_Intro_to_ML/Sprint_7_Intro_to_ML.html)
+📂 **Notebook:** [Project 6: Mobile Plan Recommendation Model Project](https://holly-d-c.github.io/my-portfolio/Project_7_Intro_to_ML/Sprint_7_Intro_to_ML.html)
