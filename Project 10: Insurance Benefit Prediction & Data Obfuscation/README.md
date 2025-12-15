@@ -60,10 +60,6 @@ Evaluate whether machine learning can be used at *Sure Tomorrow Insurance* to:
 
 ---
 
+## Project Link
 
-
-
-
-
-
-https://holly-d-c.github.io/my-portfolio/Project_11/Project_11_Linear%20Algebra.html
+📂 **Notebook:** [Project 10: Insurance Benefit Prediction & Data Obfuscation](https://holly-d-c.github.io/my-portfolio/Project_11/Project_11_Linear%20Algebra.html)
