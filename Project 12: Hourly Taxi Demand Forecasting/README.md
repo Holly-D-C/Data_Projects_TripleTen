@@ -2,7 +2,7 @@
 
 ---
 
-## 🔍 Objective
+## 🎯 Objective
 
 Predict **hourly taxi demand** at airports for *Sweet Lift Taxi* to improve driver allocation.
 
