@@ -69,4 +69,6 @@ Build a production‑ready ML system for *Rusty Bargain* to predict used car pri
 
 ---
 
-https://holly-d-c.github.io/my-portfolio/Project_12/Project_12_Car_App.html
+## Project Link
+
+📂 **Notebook:** [Project 11: Used Car Price Prediction with Gradient Boosting](https://holly-d-c.github.io/my-portfolio/Project_12/Project_12_Car_App.html)
