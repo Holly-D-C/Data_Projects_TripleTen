@@ -69,20 +69,4 @@ Build a production‑ready ML system for *Rusty Bargain* to predict used car pri
 
 ---
 
-
-
-
-
-
-
-
-
-
-
-
-📁 Each project folder contains:
-
-* Jupyter notebooks
-* Data preprocessing steps
-* Model training & evaluation
-* Clear conclusions and business recommendations
+https://holly-d-c.github.io/my-portfolio/Project_12/Project_12_Car_App.html
