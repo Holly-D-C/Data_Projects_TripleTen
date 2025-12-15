@@ -94,4 +94,8 @@ With RMSE ≈ 39:
 
 ---
 
-https://holly-d-c.github.io/my-portfolio/Project_13_Time_Series/Project_13_Taxi_Order_Prediction.html
+## Project Link
+
+📂 **Notebook:** [Project 12: Hourly Taxi Demand Forecasting](https://holly-d-c.github.io/my-portfolio/Project_13_Time_Series/Project_13_Taxi_Order_Prediction.html)
+
+
