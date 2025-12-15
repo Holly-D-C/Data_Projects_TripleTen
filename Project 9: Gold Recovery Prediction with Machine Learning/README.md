@@ -131,3 +131,9 @@ The pipeline is **deployment-ready** and validated on unseen test data.
 - NumPy
 - matplotlib
 - scikit-learn
+
+---
+
+## Project Link
+
+📂 **Notebook:** [Project 9: Gold Recovery Prediction with Machine Learning](https://holly-d-c.github.io/my-portfolio/Project_10_Integrated%20Project/Project_10_Gold.html)
