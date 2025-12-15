@@ -96,6 +96,6 @@ Titles were categorized based on IMDb score:
 
 ## Project Link
 
-📂 Notebook: `Project_1.ipynb`
+📂 Notebook: [Project 1: IMDb Movie Trends Analysis /Project_1.ipynb](https://holly-d-c.github.io/my-portfolio/Project_1/Project_1.html)
 
 
