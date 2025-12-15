@@ -1,62 +1,57 @@
-# Project 10 - Insurance Benefit Prediction & Data Obfuscation
----
+# 🏥 Insurance Benefit Prediction & Data Obfuscation
 
-## 🎯 Objective
+## Overview
+Evaluated the feasibility of applying machine learning at *Sure Tomorrow Insurance* to improve customer targeting, predict benefit usage, and protect sensitive personal data — **without sacrificing model performance**.
 
-Evaluate whether machine learning can be used at *Sure Tomorrow Insurance* to:
-
-1. Identify similar customers for marketing purposes
-2. Predict whether a customer will receive insurance benefits
-3. Predict the *number* of benefits a customer will receive
-4. Protect sensitive customer data **without degrading model performance**
+**Goal:** Improve predictive accuracy while ensuring customer data privacy and regulatory safety.
 
 ---
 
-### 🧠 Models & Methods
+## Key Results 🚀
 
-* **k‑Nearest Neighbors (kNN)** — classification
-* **Linear Regression** — benefit count prediction
-* **Matrix‑based Data Obfuscation** — privacy protection
+✅ **Accurate predictions with guaranteed privacy preservation**
 
----
-
-### 🧪 Key Results
-
-#### kNN Classification (Benefit Receipt)
-
-* **F1‑score improvement:** **4.7×** over dummy baseline
-* Demonstrated that **feature scaling is essential** for distance‑based models
-* Unscaled models failed due to income dominating distance calculations
-
-#### Linear Regression (Benefit Count)
-
-* **RMSE:** 0.34
-* **R²:** 0.66
-* Confirmed **scale invariance** of linear regression
-
-#### Data Obfuscation
-
-* Implemented feature transformation: `X' = X × P` (invertible matrix)
-* **Model performance unchanged** after obfuscation
-* Guaranteed privacy while maintaining identical predictions
+- **kNN Classification:** **4.7× F1-score improvement** over dummy baseline after feature scaling
+- **Linear Regression:** RMSE = **0.34**, R² = **0.66**
+- **Data Obfuscation:** Identical model performance before and after anonymization
+- **Privacy-Safe Modeling:** Personal data rendered unrecoverable without transformation key
 
 ---
 
-### 📊 Summary Table
+## Why This Approach Works
 
-| Task                   | Model             | Key Metric | Result               |
-| ---------------------- | ----------------- | ---------- | -------------------- |
-| Benefit Classification | kNN (scaled)      | F1         | **0.94**             |
-| Benefit Count          | Linear Regression | RMSE       | **0.34**             |
-| Obfuscated Regression  | Linear Regression | RMSE       | **0.35 (identical)** |
+| Task | Method | Outcome |
+|----|----|----|
+| Customer targeting | kNN (scaled) | F1 = **0.94** |
+| Benefit count prediction | Linear Regression | RMSE = **0.34** |
+| Privacy protection | Matrix obfuscation | **No performance loss** |
+
+**Key Insight:**  
+Distance-based models require feature scaling for fairness and accuracy, while linear regression is inherently scale-invariant. Matrix-based obfuscation preserves linear relationships, allowing full privacy protection without degrading predictions.
 
 ---
 
-### 🛠 Tech Stack
+## Methodology (Brief)
+- Feature scaling applied to distance-based models (kNN)
+- Linear Regression used for benefit count prediction
+- Data obfuscation via invertible matrix transformation (`X' = X × P`)
+- Mathematical and empirical validation of prediction invariance
 
-* Python, pandas, NumPy
-* scikit‑learn
-* Mathematical validation of model invariance
+---
+
+## Business Impact
+- Enables **privacy-compliant ML deployment**
+- Improves customer targeting accuracy
+- Protects sensitive demographic and financial data
+- Demonstrates how regulation and performance can coexist
+
+---
+
+## Tech Stack
+- Python
+- pandas
+- NumPy
+- scikit-learn
 
 ---
 
