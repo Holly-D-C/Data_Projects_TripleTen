@@ -1,96 +1,92 @@
-# Project 1: Data Analysis with Pandas — IMDb Movie Trends Analysis
+# 🎬 IMDb Movie & TV Show Trends Analysis
 
 ## Overview
-
-This project focuses on exploratory data analysis (EDA) and data cleaning using **pandas**. The goal was to transform a messy movie and TV show dataset into a clean, usable format and extract meaningful insights about IMDb ratings, actors, and release trends.
-
-The project emphasizes **real-world data issues** such as inconsistent column names, encoding problems, missing values, and duplicated records—all common challenges in data science workflows.
+Performed **exploratory data analysis (EDA)** and **data cleaning** on a messy IMDb dataset to extract insights on movie and TV show ratings, actors, and release trends.  
+The project addresses **real-world data issues** such as inconsistent column names, encoding errors, missing values, and duplicates—common challenges in production-level data science.
 
 ---
 
-## Business / Analytical Problem
+## Objective 🎯
+Transform raw IMDb data into a clean, analyzable format and answer key business questions:
 
-Raw entertainment datasets often contain formatting errors and inconsistencies that make reliable analysis difficult. This project addresses:
-
-* How to clean and standardize poorly formatted data
-* How to extract actor- and title-level insights
-* How to identify and categorize top-rated movies and shows
+- Which movies and shows are top-rated?
+- Which actors appear in the highest-rated content?
+- How do ratings and popularity vary over decades?
+- How to standardize messy datasets for reliable analysis?
 
 ---
 
-## Dataset
+## Dataset 📊
 
-**Source:** `movies_and_shows.csv`
-
-**Size:** 85,579 rows × 9 columns
+**Source:** `movies_and_shows.csv`  
+**Size:** 85,579 rows × 9 columns  
 
 **Key Features:**
 
-* `name`: Actor or actress name
-* `character`: Character played
-* `role`: Role type (ACTOR / DIRECTOR)
-* `title`: Movie or show title
-* `type`: MOVIE or SHOW
-* `release_year`: Year of release
-* `genres`: List of genres
-* `imdb_score`: IMDb rating
-* `imdb_votes`: Number of IMDb votes
+| Feature | Description |
+|---------|-------------|
+| `name` | Actor or actress name |
+| `character` | Character played |
+| `role` | Role type (ACTOR / DIRECTOR) |
+| `title` | Movie or show title |
+| `type` | MOVIE or SHOW |
+| `release_year` | Year of release |
+| `genres` | List of genres |
+| `imdb_score` | IMDb rating |
+| `imdb_votes` | Number of IMDb votes |
 
 ---
 
-## Key Tasks & Methods
+## Methodology 🛠
 
 ### 1. Data Cleaning & Standardization
+- Renamed inconsistent columns (e.g., `r0le` → `role`, `imdb sc0re` → `imdb_score`)  
+- Stripped whitespace from column names  
+- Ensured consistent data types  
 
-* Renamed inconsistent and misspelled column names (e.g., `r0le` → `role`, `imdb sc0re` → `imdb_score`)
-* Removed leading/trailing whitespace from column names
-* Ensured consistent data types for analysis
+### 2. Encoding & Text Correction
+- Corrected corrupted text entries (e.g., `In??s Prieto`)  
+- Verified fixes to maintain data integrity  
 
-### 2. Encoding & Data Correction
+### 3. Exploratory Data Analysis
+- Identified titles with IMDb scores ≥ 9.0  
+- Extracted unique top-rated titles to avoid duplication  
+- Examined critically acclaimed shows (*Breaking Bad*, *Avatar: The Last Airbender*, *Reply 1988*)  
 
-* Identified encoding-related name errors (e.g., `In??s Prieto`)
-* Corrected corrupted text values using indexed updates
-* Verified corrections to ensure data integrity
-
-### 3. Exploratory Analysis
-
-* Identified movies and shows with IMDb scores ≥ 9.0
-* Extracted unique top-rated titles to avoid duplication
-* Analyzed highly rated shows such as *Breaking Bad*, *Avatar: The Last Airbender*, and *Reply 1988*
-
-### 4. Reusable Functions
-
-Built reusable functions to support dynamic analysis:
-
-* `get_unique_top_movies(min_score)` — returns unique titles above a given IMDb threshold
-* `get_top_movies_from_decade(decade_start, min_score)` — retrieves top-rated titles by decade
-* `get_actors_for_title(title)` — lists all actors in a given movie or show
-* `categorize_imdb_score(title)` — categorizes titles as *Excellent*, *Good*, *Average*, or *Low*
+### 4. Reusable Analysis Functions
+- `get_unique_top_movies(min_score)` — fetch unique titles above a score  
+- `get_top_movies_from_decade(decade_start, min_score)` — top-rated titles by decade  
+- `get_actors_for_title(title)` — list actors per title  
+- `categorize_imdb_score(title)` — categorize as *Excellent*, *Good*, *Average*, or *Low*  
 
 ### 5. IMDb Score Categorization
-
-Titles were categorized based on IMDb score:
-
-* **Excellent:** ≥ 9.0
-* **Good:** 7.0 – 8.9
-* **Average:** 5.0 – 6.9
-* **Low:** < 5.0
+| Category | IMDb Score |
+|----------|------------|
+| Excellent | ≥ 9.0 |
+| Good | 7.0 – 8.9 |
+| Average | 5.0 – 6.9 |
+| Low | < 5.0 |
 
 ---
 
-## Key Findings
+## Key Findings 📈
+- **Top-rated content:** Higher concentration in TV shows than movies  
+- **Decade trends:** Strong representation of drama and crime genres across decades  
+- **Data quality impact:** Encoding issues can distort grouping and filtering if uncorrected  
 
-* High IMDb ratings are concentrated in TV shows rather than movies
-* Top-rated content spans multiple decades, with strong representation in drama and crime genres
-* Encoding issues can significantly impact grouping and filtering if not corrected
+---
+
+## Business Impact 💡
+- Enables identification of top-performing content for **recommendation systems**  
+- Supports **actor and genre analytics** for content acquisition or licensing  
+- Demonstrates methods to **clean and standardize messy datasets** for reliable analytics  
 
 ---
 
 ## Tools & Technologies
-
-* **Python**
-* **pandas**
-* **Jupyter Notebook**
+- Python  
+- pandas  
+- Jupyter Notebook  
 
 ---
 
