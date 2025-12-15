@@ -60,3 +60,6 @@ This analysis highlights strong habitual purchasing behavior among Instacart cus
 
 ---
 
+## Project Link
+
+📂 Notebook: [Project 2: Instacart Customer Behavior Analysis (EDA)](https://holly-d-c.github.io/my-portfolio/Project_2/Project_2_EDA_Instacart.html)
