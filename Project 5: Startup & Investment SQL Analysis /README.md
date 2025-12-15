@@ -211,6 +211,6 @@ The dataset includes multiple interconnected tables:
 
 ## Project Link
 
-📂 **Notebook:** [Startup & Investment SQL Analysis Project](https://holly-d-c.github.io/my-portfolio/Project_6_SQL/Startup_and_Investment_SQL_Analysis_Project.pdf)
+📂 **Notebook:** [Project 5: Startup & Investment SQL Analysis Project](https://holly-d-c.github.io/my-portfolio/Project_6_SQL/Startup_and_Investment_SQL_Analysis_Project.pdf)
 
 
