@@ -111,5 +111,6 @@ Revenue differs significantly by region.
 
 ---
 
-## Project Files
-- [`mobile_plan_revenue_analysis.ipynb`](https://holly-d-c.github.io/my-portfolio/Project_3/Project_3_Phone_Plan.html) — full analysis notebook
+## Project Link
+
+📂 Notebook: [Project 3: Mobile Plan Revenue Analysis](https://holly-d-c.github.io/my-portfolio/Project_3/Project_3_Phone_Plan.html)
