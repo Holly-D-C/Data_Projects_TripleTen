@@ -1,103 +1,62 @@
 # 📱 Mobile Plan Revenue Analysis
 
-## Project Overview
-This project analyzes customer behavior and revenue generation for two prepaid mobile plans — **Surf** and **Ultimate** — to determine which plan produces higher revenue and how customer usage patterns differ.
+## Overview
+Analyzed **customer usage and revenue generation** for two prepaid mobile plans — **Surf** and **Ultimate** — to determine which plan drives higher revenue and understand usage patterns.  
 
-The analysis evaluates calls, text messages, and mobile internet usage, aggregates monthly activity, calculates total revenue, and applies statistical hypothesis testing to support business decisions.
-
----
-
-## Business Questions
-1. Which prepaid plan generates more revenue — Surf or Ultimate?
-2. How do customer usage patterns differ between plans?
-3. Does customer location (NY–NJ vs. other regions) impact revenue?
+**Goal:** Provide actionable insights to optimize plan offerings and pricing strategy.
 
 ---
 
-## Data Description
-The dataset includes:
-- Call records (duration rounded up per call)
-- Text message counts
-- Internet usage sessions (MB converted to GB and rounded up)
-- User demographics and geographic location
-- Plan pricing, limits, and overage fees
+## Key Results 🚀
 
-All customer activity was aggregated at the **monthly level**.
+✅ **Revenue Insights**
+- **Ultimate plan:** Higher and more predictable monthly revenue  
+- **Surf plan:** Generates revenue volatility due to frequent data overages (~41% of overage revenue comes from internet usage)  
+- **Calls & texts:** Minimal contribution to overage revenue  
+- **Regional differences:** NY–NJ users generate significantly different revenue than other regions  
 
 ---
 
-## Methodology
+## Why This Analysis?
 
-### 1. Data Preparation
-- Converted date columns to datetime format
-- Aggregated monthly usage per user:
-  - Call minutes
-  - Text messages
-  - Internet usage (GB)
-- Rounded usage according to billing rules
-- Merged usage data with plan and user information
-- Replaced missing usage values with zeros
+| Business Question | Metric / Approach | Key Finding |
+|------------------|-----------------|-------------|
+| Revenue by Plan | Welch’s t-test | Ultimate > Surf (p = 1.37e-21) |
+| Usage Patterns | Aggregated call, text, internet usage | Surf exceeds data limits more often |
+| Revenue by Region | Welch’s t-test | NY–NJ differs significantly (p = 0.038) |
 
 ---
 
-### 2. Revenue Calculation
-For each user-month:
-- Subtracted plan limits from actual usage
-- Calculated overage charges for calls, texts, and internet
-- Set negative overages to zero
-- Added the base monthly plan fee
+## Methodology (Brief)
 
-**Final metric:** `monthly_revenue`
+1. **Data Preparation**
+   - Converted dates to datetime  
+   - Aggregated monthly usage per user (calls, texts, internet in GB)  
+   - Rounded usage according to billing rules  
+   - Merged with plan and user data  
+   - Replaced missing usage with zeros  
 
----
+2. **Revenue Calculation**
+   - Calculated overage charges (calls, texts, internet)  
+   - Added base plan fee  
+   - Ensured negative overages were set to zero  
 
-### 3. Exploratory Data Analysis
-- Compared usage distributions between Surf and Ultimate plans
-- Visualized monthly trends using histograms, boxplots, and line charts
-- Calculated descriptive statistics (mean, median, variance, standard deviation)
-- Analyzed revenue contribution by service type
+3. **Exploratory Data Analysis**
+   - Usage distribution comparisons by plan  
+   - Monthly trends visualization (histograms, boxplots, line charts)  
+   - Service-specific revenue contributions  
 
----
-
-### 4. Statistical Hypothesis Testing
-
-#### Hypothesis 1: Revenue by Plan
-- **H₀:** Average monthly revenue is the same for Surf and Ultimate users  
-- **H₁:** Average monthly revenue differs between plans  
-- **Test:** Welch’s t-test  
-- **α:** 0.01  
-
-**Result:** p-value = 1.37e-21 → **Reject H₀**
-
-There is a statistically significant difference in revenue between plans.
+4. **Statistical Testing**
+   - Revenue differences by plan: Welch’s t-test, α = 0.01, p = 1.37e-21 → **significant**  
+   - Revenue differences by region: Welch’s t-test, α = 0.05, p = 0.038 → **significant**
 
 ---
 
-#### Hypothesis 2: Revenue by Region
-- **H₀:** Average revenue is the same for NY–NJ users and other regions  
-- **H₁:** Average revenue differs by region  
-- **Test:** Welch’s t-test  
-- **α:** 0.05  
-
-**Result:** p-value = 0.038 → **Reject H₀**
-
-Revenue differs significantly by region.
-
----
-
-## Key Insights
-- Internet usage is the primary driver of overage revenue (~41%)
-- Surf users frequently exceed data limits, causing revenue volatility
-- Ultimate users generate more predictable monthly revenue
-- Calls and texts contribute minimally to total overage revenue
-
----
-
-## Business Recommendations
-- Encourage heavy Surf users to upgrade to the Ultimate plan
-- Promote Ultimate’s higher data allowance to reduce bill shock
-- Adjust Surf pricing or limits to improve revenue predictability
-- Consider region-specific pricing or marketing strategies
+## Business Impact
+- **Upsell Strategy:** Encourage heavy Surf users to switch to Ultimate for more predictable revenue  
+- **Plan Optimization:** Adjust Surf pricing or data limits to reduce volatility  
+- **Marketing Opportunities:** Tailor messaging to regions with higher overage revenue  
+- **Revenue Forecasting:** Predictable revenue streams support operational planning
 
 ---
 
