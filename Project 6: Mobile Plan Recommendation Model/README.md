@@ -175,12 +175,12 @@ These features collectively predict whether a customer would benefit from the Sm
 
 ---
 
-## Project Link
-
-📂 **Notebook:** [Mobile Plan Recommendation Model Project](https://holly-d-c.github.io/my-portfolio/Project_7_Intro_to_ML/Sprint_7_Intro_to_ML.html)
-
----
-
 ## Conclusion
 
 This project successfully developed a machine learning solution that **predicts customer plan preferences with 79.8% accuracy**, exceeding the business requirement of 75%. The Random Forest model demonstrates excellent generalization and is recommended for production deployment to optimize Megaline's customer plan recommendations and improve overall satisfaction.
+
+---
+
+## Project Link
+
+📂 **Notebook:** [Mobile Plan Recommendation Model Project](https://holly-d-c.github.io/my-portfolio/Project_7_Intro_to_ML/Sprint_7_Intro_to_ML.html)
